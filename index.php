@@ -2,14 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_學習網</title>
+<title>國立臺北教育大學_Group3_數學學習網</title>
 </head>
 
-<body>
-
-
-	<h2>電腦科學學習網</h2>
-
+<body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
+	<img src="design\titlefig.jpg">
 <div id="MAIN_NAV" >
 
 	<ul>
@@ -38,7 +35,7 @@
 <div id="FOOTER">	
 	<p>
 		<br/><br/><br/><br/><br/><br/>
-		<h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Gung-Si Chen</i> </center></h2>
+		<h2><center><br/>Author by <i>GROUP THREE</i> </center></h2>
 	</p>
 </div>
 </body>
