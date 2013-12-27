@@ -11,12 +11,12 @@ $sql = "SELECT * FROM member where account='$id' and password='$pw'";
 $row = mysql_fetch_array(mysql_query($sql));
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_學習網</title>
+<title>國立臺北教育大學_Group3_數學學習網_會員資料修改</title>
 </head>
 
-<body>
+<body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
 <div id="HEADER">
-	<h2>電腦科學學習網</h2>
+	<img src="design\titlefig.jpg">
 </div>
 <div id="MAIN_NAV">
 	<ul>
@@ -45,16 +45,24 @@ $row = mysql_fetch_array(mysql_query($sql));
 			}
 			else {
 		?>
-				<form name="form" method="post" action="member_update.php"> <
+				<form name="form" method="post" action="member_update.php">
 					<p>
-					帳號：<input type="text" name="account" value="<?php echo $row['account']; ?>" disabled="true"/> <br>
-					<input type="hidden" name="account" value="<?php echo $row['account']; ?>"/>  
-					密碼(留空表示不修改)：</h1><input type="password" name="pw" /> <br>
-					確認密碼：</h1><input type="password" name="pwconfirm" /> <br>
-					使用者姓名：</h1><input type="text" name="username" value="<?php echo $row['username']; ?>" /> <br>
-					Email：</h1><input type="text" name="email" value="<?php echo $row['email']; ?>" /> <br>
-					城市：</h1><input type="text" name="country" value="<?php echo $row['country']; ?>" /> <br>
-					年齡：</h1><input type="text" name="age" value="<?php echo $row['age']; ?>" /> <br>
+					<table border=1 cellspacing="2">
+					<td align=left>帳號：<input type="text" name="account" value="<?php echo $row['account']; ?>" disabled="true"/> <br>
+					<input type="hidden" name="account" value="<?php echo $row['account']; ?>"/></td>
+					<tr>
+					<td align=left>密碼(留空表示不修改)：</h1><input type="password" name="pw" /> <br></td>
+					<tr>
+					<td align=left>確認密碼：</h1><input type="password" name="pwconfirm" /> <br></td>
+					<tr>
+					<td align=left>使用者姓名：</h1><input type="text" name="username" value="<?php echo $row['username']; ?>" /> <br></td>
+					<tr>
+					<td align=left>Email：</h1><input type="text" name="email" value="<?php echo $row['email']; ?>" /> <br></td>
+					<tr>
+					<td align=left>城市：</h1><input type="text" name="country" value="<?php echo $row['country']; ?>" /> <br></td>
+					<tr>
+					<td align=left>年齡：</h1><input type="text" name="age" value="<?php echo $row['age']; ?>" /> <br></td>
+					</table>
 					</p>
 					<input type="submit" name="button" value="修改" />
 					<input type="button" value="回上一頁" onclick="javascript:history.back(1)" />
@@ -73,10 +81,8 @@ $row = mysql_fetch_array(mysql_query($sql));
 <div id="FOOTER">	
 	<p>
 		<br/><br/><br/><br/><br/><br/>
-		<h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Gung-Si Chen</i> </center></h2>
+		<h2><center><br/>Author by <i>GROUP THREE</i> </center></h2>
 	</p>
 </div>
 </body>
 </html>
-
-
