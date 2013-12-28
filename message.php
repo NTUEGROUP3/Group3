@@ -2,12 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_學習網</title>
+<title>國立臺北教育大學_Group3_數學學習網_留言版</title>
     <script type="text/javascript">
       function check_data()
       {
         if (document.myForm.author.value.length == 0)
           alert("作者欄位不可以空白哦！");
+        else if (document.myForm.country.value.length == 0)
+          alert("所在地欄位不可以空白哦！");
         else if (document.myForm.subject.value.length == 0)
           alert("主題欄位不可以空白哦！");
         else if (document.myForm.content.value.length == 0)
@@ -21,7 +23,7 @@
 
 <body>
 <div id="HEADER">
-	<h2>電腦科學學習網</h2>
+	<p align="center"><img src="design/titlefig.jpg"></p>
 </div>
 <div id="MAIN_NAV">
 	<ul>
@@ -36,7 +38,7 @@
 	</ul>
 </div>
 <div id="CONTENT"> 
-	<p align="center"><img src="messagepicture\fig.jpg"></p>
+	<p align="center"><img src="messagepicture/fig.jpg"></p>
     <?php
       require_once("dbtools.inc.php");
 			
@@ -85,9 +87,10 @@
         echo "<td width='120' align='center'>
               <img src='messagepicture/" . mt_rand(0, 9) . ".gif'></td>";
         echo "<td>作者：" . $row["author"] . "<br>";
-        echo "主題：" . $row["subject"] . "<br>";
-        echo "時間：" . $row["date"] . "<hr>";
-        echo $row["content"] . "</td></tr>";
+        echo "所在地：" . $row["country"] . "<br>";
+        echo "時間：" . $row["date"] . "<br>";
+        echo "主題：" . $row["subject"] . "<hr>";
+        echo "內容：<br>" . $row["content"] . "</td></tr>";
         $j++;
       }
       echo "</table>" ;
@@ -124,11 +127,15 @@
           <td width="15%">作者</td>
           <td width="85%"><input name="author" type="text" size="50"></td>
         </tr>
-        <tr bgcolor="#84D7FF">
+		<tr bgcolor="#84D7FF">
+          <td width="15%">所在地</td>
+          <td width="85%"><input name="country" type="text" size="50"></td>
+        </tr>
+        <tr bgcolor="#D9F2FF">
           <td width="15%">主題</td>
           <td width="85%"><input name="subject" type="text" size="50"></td>
         </tr>
-        <tr bgcolor="#D9F2FF">
+        <tr bgcolor="#84D7FF">
           <td width="15%">內容</td>
           <td width="85%"><textarea name="content" cols="50" rows="5"></textarea></td>
         </tr>
