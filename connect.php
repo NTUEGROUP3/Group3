@@ -16,7 +16,7 @@ $row = mysql_fetch_array(mysql_query($sql));
 
 <body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
 <div id="HEADER">
-	<img src="design\titlefig.jpg">
+	<p align="center"><img src="design/titlefig.jpg"></p>
 </div>
 <div id="MAIN_NAV">
 	<ul>
