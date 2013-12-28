@@ -6,7 +6,7 @@
 </head>
 
 <body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
-	<img src="design\titlefig.jpg">
+	<p align="center"><img src="design/titlefig.jpg"></p>
 <div id="MAIN_NAV" >
 
 	<ul>
