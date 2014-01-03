@@ -5,12 +5,12 @@
 include("mysql_connect.php");   
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_學習網</title>
+<title>國立臺北教育大學_Group3_數學學習網_開始閱讀</title>
 </head>
 
-<body>
+<body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
 <div id="HEADER">
-	<h2>電腦科學學習網</h2>
+	<p align="center"><img src="design\titlefig.jpg">
 </div>
 <div id="MAIN_NAV">
 	<ul>
@@ -32,10 +32,13 @@ include("mysql_connect.php");
 		<br/>
 		<h3>
 
-		<form name="form" method="post" action=" reading_connect.php">
+		<form name="form" method="post" action=" reading_connect_new.php">
 			<p>
-			帳號：<input type="text" name="id" /> <br>
-			密碼：<input type="password" name="pw" /> <br>
+			<table border=1 cellspacing="2">
+			<td align=left>帳號：<input type="text" name="id" /> <br></td>
+			<tr>
+			<td align=left>密碼：</h1><input type="password" name="pw" /> <br></td>
+			</table>
 			</p>
 			<input type="submit" name="button" value="開始" />
 			<p>
@@ -49,7 +52,7 @@ include("mysql_connect.php");
 <div id="FOOTER">	
 	<p>
 		<br/><br/><br/><br/><br/><br/>
-		<h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Gung-Si Chen</i> </center></h2>
+		<h2><center><br/>Author by <i>GROUP THREE</i> </center></h2>
 	</p>
 </div>
 </body>
