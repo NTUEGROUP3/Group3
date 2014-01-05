@@ -141,7 +141,7 @@
     </tr> <!--引導使用者填入內容-->
     <tr>
     <td colspan="2" align="center">
-    <input type="button" value="張貼留言" onClick="check_data()"> <!--點選即傳出留言-->
+    <input type="button" value="張貼留言" onClick="check_data()"> <!--點選即送出留言-->
     <input type="reset" value="重新輸入"> <!--點選即清空表格-->
     </td>
     </tr>
