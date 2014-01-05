@@ -7,13 +7,13 @@
       function check_data()
       {
         if (document.myForm.author.value.length == 0)
-          alert("作者欄位不可以空白哦！"); <!--若使用者沒填姓名會顯示此題示-->
+          alert("作者欄位不可以空白哦！"); //若使用者沒填姓名會顯示此題示
         else if (document.myForm.country.value.length == 0)
-          alert("所在地欄位不可以空白哦！"); <!--若使用者沒填所在地會顯示此題示-->
+          alert("所在地欄位不可以空白哦！"); //若使用者沒填所在地會顯示此題示
         else if (document.myForm.subject.value.length == 0)
-          alert("主題欄位不可以空白哦！"); <!--若使用者沒填主題會顯示此題示-->
+          alert("主題欄位不可以空白哦！"); //若使用者沒填主題會顯示此題示
         else if (document.myForm.content.value.length == 0)
-          alert("內容欄位不可以空白哦！"); <!--若使用者沒填內容會顯示此題示-->
+          alert("內容欄位不可以空白哦！"); //若使用者沒填內容會顯示此題示
         else
           myForm.submit();
       }
