@@ -7,13 +7,13 @@
       function check_data()
       {
         if (document.myForm.author.value.length == 0)
-          alert("作者欄位不可以空白哦！");
+          alert("作者欄位不可以空白哦！"); <!--若使用者沒填姓名會顯示此題示-->
         else if (document.myForm.country.value.length == 0)
-          alert("所在地欄位不可以空白哦！");
+          alert("所在地欄位不可以空白哦！"); <!--若使用者沒填所在地會顯示此題示-->
         else if (document.myForm.subject.value.length == 0)
-          alert("主題欄位不可以空白哦！");
+          alert("主題欄位不可以空白哦！"); <!--若使用者沒填主題會顯示此題示-->
         else if (document.myForm.content.value.length == 0)
-          alert("內容欄位不可以空白哦！");
+          alert("內容欄位不可以空白哦！"); <!--若使用者沒填內容會顯示此題示-->
         else
           myForm.submit();
       }
@@ -23,25 +23,25 @@
 
 <body>
 <div id="HEADER">
-	<p align="center"><img src="design/titlefig.jpg"></p>
+        <p align="center"><img src="design/titlefig.jpg"></p>
 </div>
 <div id="MAIN_NAV">
-	<ul>
-		<li><a href="reading.php">開始閱讀</a></li>
-		<li><a href="upload.php">檔案上傳</a></li>
-		<li><b>留言板</b></li>
-		<li><a href="record.php">歷史紀錄</a></li>
-		<li><a href="login.php">會員資料修改</a></li>
-		<li><a href="group.php">管理團隊</a></li>
-		<li><a href="manager_login.php">管理者專區</a></li>
-		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
-	</ul>
+        <ul>
+                <li><a href="reading.php">開始閱讀</a></li> <!--點選即跳到reading頁面-->
+                <li><a href="upload.php">檔案上傳</a></li> <!--點選即跳到upload頁面-->
+                <li><b>留言板</b></li> <!--此頁面即為留言版因此直接印出-->
+                <li><a href="record.php">歷史紀錄</a></li> <!--點選即跳到record頁面-->
+                <li><a href="login.php">會員資料修改</a></li> <!--點選即跳到login頁面-->
+                <li><a href="group.php">管理團隊</a></li> <!--點選即跳到group頁面-->
+                <li><a href="manager_login.php">管理者專區</a></li> <!--點選即跳到manager_login頁面-->
+                <li><a href="index.php" style="color:#FF99FF">回首頁</a></li> <!--點選即跳到index頁面-->
+        </ul>
 </div>
-<div id="CONTENT"> 
-	<p align="center"><img src="messagepicture/fig.jpg"></p>
+<div id="CONTENT">
+        <p align="center"><img src="messagepicture/fig.jpg"></p>
     <?php
       require_once("dbtools.inc.php");
-			
+                        
       
       $records_per_page = 5;
 
@@ -53,9 +53,9 @@
 
       
       $link = create_connection();
-			
+                        
       
-      $sql = "SELECT * FROM message ORDER BY date DESC";	
+      $sql = "SELECT * FROM message ORDER BY date DESC";        
       $result = execute_sql("LMS", $sql, $link);
 
       
@@ -85,12 +85,12 @@
       {
         echo "<tr bgcolor='" . $bg[$j - 1] . "'>";
         echo "<td width='120' align='center'>
-              <img src='messagepicture/" . mt_rand(0, 9) . ".gif'></td>";
-        echo "<td>作者：" . $row["author"] . "<br>";
-        echo "所在地：" . $row["country"] . "<br>";
-        echo "時間：" . $row["date"] . "<br>";
-        echo "主題：" . $row["subject"] . "<hr>";
-        echo "內容：<br>" . $row["content"] . "</td></tr>";
+<img src='messagepicture/" . mt_rand(0, 9) . ".gif'></td>";
+        echo "<td>作者：" . $row["author"] . "<br>"; //顯示使用者所填姓名
+        echo "所在地：" . $row["country"] . "<br>"; //顯示使用者所填所在地
+        echo "時間：" . $row["date"] . "<br>"; //顯示使用者留言時間
+        echo "主題：" . $row["subject"] . "<hr>"; //顯示使用者所填主題
+        echo "內容：<br>" . $row["content"] . "</td></tr>"; //顯示使用者所填內容
         $j++;
       }
       echo "</table>" ;
@@ -117,41 +117,41 @@
       mysql_free_result($result);
       mysql_close($link);
     ?>
-    <form name="myForm" method="post" action="post.php">
-      <table border="0" width="800" align="center" cellspacing="0">
-        <tr bgcolor="#0084CA" align="center">
-          <td colspan="2">
-            <font color="#FFFFFF">請在此輸入新的留言</font></td>
-        </tr>
-        <tr bgcolor="#D9F2FF">
-          <td width="15%">作者</td>
-          <td width="85%"><input name="author" type="text" size="50"></td>
-        </tr>
-		<tr bgcolor="#84D7FF">
-          <td width="15%">所在地</td>
-          <td width="85%"><input name="country" type="text" size="50"></td>
-        </tr>
-        <tr bgcolor="#D9F2FF">
-          <td width="15%">主題</td>
-          <td width="85%"><input name="subject" type="text" size="50"></td>
-        </tr>
-        <tr bgcolor="#84D7FF">
-          <td width="15%">內容</td>
-          <td width="85%"><textarea name="content" cols="50" rows="5"></textarea></td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
-            <input type="button" value="張貼留言" onClick="check_data()">　
-            <input type="reset" value="重新輸入">
-          </td>
-        </tr>
-      </table>
-    </form>
+<form name="myForm" method="post" action="post.php">
+<table border="0" width="800" align="center" cellspacing="0">
+<tr bgcolor="#0084CA" align="center">
+<td colspan="2">
+<font color="#FFFFFF">請在此輸入新的留言</font></td>
+</tr>
+<tr bgcolor="#D9F2FF">
+<td width="15%">作者</td>
+<td width="85%"><input name="author" type="text" size="50"></td>
+</tr> <!--引導使用者填入姓名-->
+<tr bgcolor="#84D7FF">
+<td width="15%">所在地</td>
+<td width="85%"><input name="country" type="text" size="50"></td>
+</tr> <!--引導使用者填入所在地-->
+<tr bgcolor="#D9F2FF">
+<td width="15%">主題</td>
+<td width="85%"><input name="subject" type="text" size="50"></td>
+</tr> <!--引導使用者填入主題-->
+<tr bgcolor="#84D7FF">
+<td width="15%">內容</td>
+<td width="85%"><textarea name="content" cols="50" rows="5"></textarea></td>
+</tr> <!--引導使用者填入內容-->
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="張貼留言" onClick="check_data()"> <!--點選即傳出留言-->
+<input type="reset" value="重新輸入"> <!--點選即清空表格-->
+</td>
+</tr>
+</table>
+</form>
 </div>
-<div id="FOOTER">	
-	<p>
-		<br/><br/><br/><br/><br/><br/>
-		<h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Gung-Si Chen</i> </center></h2>
-	</p>
+<div id="FOOTER">        
+        <p>
+                <br/><br/><br/><br/><br/><br/>
+                <h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Gung-Si Chen</i> </center></h2>
+        </p>
 </div>
 </body>
