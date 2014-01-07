@@ -5,7 +5,7 @@
 include("mysql_connect.php");   
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_Group3_數學學習網_開始閱讀</title>
+<title>國立臺北教育大學_Group3_數學學習網_開始閱讀</title> <!--開始閱讀首頁-->
 </head>
 
 <body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
@@ -31,16 +31,17 @@ include("mysql_connect.php");
 		<br/>	
 		<br/>
 		<h3>
-
-		<form name="form" method="post" action=" reading_connect_new.php">
+		
+		<!--輸入帳號密碼後跳至reading_connect_new頁面-->
+		<form name="form" method="post" action="reading_connect_new.php">
 			<p>
 			<table border=1 cellspacing="2">
-			<td align=left>帳號：<input type="text" name="id" /> <br></td>
+			<td align=left>帳號：<input type="text" name="id" /> <br></td><!--輸入帳號-->
 			<tr>
-			<td align=left>密碼：</h1><input type="password" name="pw" /> <br></td>
+			<td align=left>密碼：</h1><input type="password" name="pw" /> <br></td><!--輸入密碼-->
 			</table>
 			</p>
-			<input type="submit" name="button" value="開始" />
+			<input type="submit" name="button" value="開始" /><!--開始的按鈕-->
 			<p>
 			</p>
 		</form>
