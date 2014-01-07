@@ -34,8 +34,9 @@ $row = mysql_fetch_array(mysql_query($sql));
 				
 		<?php
 				echo $id;
-				echo "<h2>請選擇閱讀材料<br/></h2><br/><br/>";
-				$sql = "SELECT * FROM reading";
+				echo '<img src="design\titlefig6.jpg">';
+				echo "<br/><h2>請選擇閱讀材料<br/></h2><br/><br/>";
+				$sql = "SELECT * FROM grade6";
 				$result = mysql_query($sql);
 											
 				if (!$result) { 
@@ -63,7 +64,7 @@ $row = mysql_fetch_array(mysql_query($sql));
 		?>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<form name="form" method="post" action=" reading.php">
-			<input type="submit" name="button" value="回上一頁" />	 
+			<input type="submit" name="button" value="回 開始閱讀首頁" />	 
 		</form>
 		
 		</center>
