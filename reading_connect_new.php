@@ -34,15 +34,17 @@ $row = mysql_fetch_array(mysql_query($sql));
 		<center>
 				
 		<?php
+			//判斷帳號密碼是否正確
 			if (!$row) { 
 				echo "<h3>帳號或密碼錯誤，請重新輸入</h3>";
         		echo '<meta http-equiv=REFRESH CONTENT=2;url=reading.php>';
+				//若錯誤則回到reading.php，即開始閱讀首頁
 			}
 			else {
 			echo
 				'<p>
+				<h2>請選擇年級!<br/></h2><br/>
 				<table border=1 cellspacing="2">
-				<caption>請選擇年級</caption><br/><br/>
 				<td align=left><a href="grade1.php"> ☆ 一年級 ☆ </a><br></td>
 				<tr>
 				<td align=left><a href="grade2.php"> ☆ 二年級 ☆ </a><br></td>
@@ -57,11 +59,12 @@ $row = mysql_fetch_array(mysql_query($sql));
 				<tr>
 				</table>
 				</p>';
+				//若正確則印出表格，內含六個年級的連結
 			}
 		?>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<form name="form" method="post" action=" reading.php">
-			<input type="submit" name="button" value="回上一頁" />	 
+			<input type="submit" name="button" value="回 開始閱讀首頁" />	 
 		</form>
 		
 		</center>
