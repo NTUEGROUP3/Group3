@@ -21,7 +21,7 @@
 
 </head>
 
-<body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
+<body bgcolor="BLACK" text="BLACK" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
 <div id="HEADER">
     <p align="center"><img src="design/titlefig.jpg">
 </div>
