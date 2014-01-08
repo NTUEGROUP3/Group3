@@ -63,7 +63,7 @@ $row = mysql_fetch_array(mysql_query($sql));
 			}
 		?>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<form name="form" method="post" action=" reading.php">
+		<form name="form" method="post" action=" reading.php"><!--回reading.php，即開始閱讀頁-->
 			<input type="submit" name="button" value="回 開始閱讀首頁" />	 
 		</form>
 		
