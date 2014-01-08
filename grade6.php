@@ -36,7 +36,7 @@ $row = mysql_fetch_array(mysql_query($sql));
 				echo $id;
 				echo '<img src="design\titlefig6.jpg">';
 				echo "<br/><h2>請選擇閱讀材料<br/></h2><br/><br/>";
-				$sql = "SELECT * FROM grade6";
+				$sql = "SELECT * FROM grade6";//FROM資料庫grade6
 				$result = mysql_query($sql);
 											
 				if (!$result) { 
