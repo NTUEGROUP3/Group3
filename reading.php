@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <?php
-include("mysql_connect.php");   
+include("mysql_connect.php");//呼叫資料庫  
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>國立臺北教育大學_Group3_數學學習網_開始閱讀</title> <!--開始閱讀首頁-->
@@ -41,7 +41,7 @@ include("mysql_connect.php");
 			<td align=left>密碼：</h1><input type="password" name="pw" /> <br></td><!--輸入密碼-->
 			</table>
 			</p>
-			<input type="submit" name="button" value="開始" /><!--開始的按鈕-->
+			<input type="submit" name="button" value="開始" /><!--按開始傳入帳密-->
 			<p>
 			</p>
 		</form>
