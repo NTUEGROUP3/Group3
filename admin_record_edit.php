@@ -11,7 +11,7 @@
 	$account = $serial_array[1];         
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_學習網</title>
+<title>國立臺北教育大學_學習網</title><!--這是網頁標題-->
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 		<li><a href="login.php">會員資料修改</li>
 		<li><a href="group.php">管理團隊</a></li>
 		<li><b>管理者專區</b></li>
-		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
+		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>  <!--按了之後會回首頁-->
 	</ul>
 </div>
 <div id="CONTENT">
@@ -38,7 +38,7 @@
 		<center>
 		<?php
 			/* reading */
-			if($button === "新增"){ 
+			if($button === "新增"){ //按了之後會新增
 		?>
 				<form name="form" method="post" action="admin_record_done.php">
 					<p>
@@ -53,7 +53,7 @@
 				</form>
 		<?php
 			}
-			else if($button === "修改"){
+			else if($button === "修改"){ //按了之後可以修改項目
 				
 				$sql = "SELECT * FROM record WHERE serial='$serial_number' AND account='$account'"; 
 				$result = mysql_query($sql);
@@ -78,7 +78,7 @@
 		<?php
 				}
 			}
-			else if($button === "刪除"){
+			else if($button === "刪除"){  //按了之後將刪除的項目
 				$sql = "DELETE FROM record WHERE serial='$serial_number' AND account='$account'";
 				$result = mysql_query($sql);
 											
