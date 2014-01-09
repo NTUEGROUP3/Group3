@@ -20,13 +20,13 @@
 <div id="MAIN_NAV">
 	<ul>
 		<li><a href="reading.php">開始閱讀</a></li> <!--按了是開始閱讀-->
-		<li><a href="upload.php">檔案上傳</a></li>
-		<li><a href="message.php">留言板</a></li>
-		<li><a href="record.php">歷史紀錄</a></li>
-		<li><a href="login.php">會員資料修改</li>
-		<li><a href="group.php">管理團隊</a></li>
-		<li><b>管理者專區</b></li>
-		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
+		<li><a href="upload.php">檔案上傳</a></li>  <!--按了是檔案上傳-->
+		<li><a href="message.php">留言板</a></li>  <!--按了是留言板-->
+		<li><a href="record.php">歷史紀錄</a></li>  <!--按了能看歷史紀錄-->
+		<li><a href="login.php">會員資料修改</li>  <!--按了可以做會員資料修改-->
+		<li><a href="group.php">管理團隊</a></li> <!--按了可以管理團隊-->
+		<li><b>管理者專區</b></li>  <!--按了可到管理者專區-->
+		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>  <!--按了回到首頁\-->
 	</ul>
 </div>
 <div id="CONTENT">
@@ -50,7 +50,7 @@
 				if (!$result) { 
 					die('Invalid query: ' . mysql_error());
 				}
-				echo "<h3>資料已修改.....</h3>";
+				echo "<h3>資料已修改.....</h3>";  //修改後顯示修改資料
 			}	
 						
 		?>
