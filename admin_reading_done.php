@@ -10,7 +10,7 @@
 	$button = $_POST['button'];
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_學習網</title>
+<title>國立臺北教育大學_學習網</title> <!--這是網頁的標題-->
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 </div>
 <div id="MAIN_NAV">
 	<ul>
-		<li><a href="reading.php">開始閱讀</a></li> 
+		<li><a href="reading.php">開始閱讀</a></li> <!--按了是開始閱讀-->
 		<li><a href="upload.php">檔案上傳</a></li>
 		<li><a href="message.php">留言板</a></li>
 		<li><a href="record.php">歷史紀錄</a></li>
@@ -42,7 +42,7 @@
 				if (!$result) {
 					die('Invalid query: ' . mysql_error());
 				}
-				echo "<h3>資料已新增.....</h3>";
+				echo "<h3>資料已新增.....</h3>";//新增後悔顯示所新增的資料
 			}
 			else if($button === "修改"){
 				$sql = "UPDATE reading SET serial='$serial', type='$type', name='$name', content='$content' WHERE serial='$serial'";//要update的value值
