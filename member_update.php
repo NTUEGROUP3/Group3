@@ -39,19 +39,19 @@
 		<center>
 		<?php
 			if($username == null){  
-				echo "<h3>使用者名稱為空白，請重新輸入</h3>";  
+				echo "<h3>使用者名稱為空白，請重新輸入</h3>";   //未打上新的使用者名稱
 				echo '<meta http-equiv=REFRESH CONTENT=2;url=login.php>';
 			}
 			else if($email == null){  
-				echo "<h3>Email為空白，請重新輸入</h3>";
+				echo "<h3>Email為空白，請重新輸入</h3>";//未打上修改後的EMAIL
 				echo '<meta http-equiv=REFRESH CONTENT=2;url=login.php>';
 			}
 			else if($country == null){  
-				echo "<h3>城市為空白，請重新輸入</h3>";
+				echo "<h3>城市為空白，請重新輸入</h3>";//未打上新的所在地
 				echo '<meta http-equiv=REFRESH CONTENT=2;url=login.php>';
 			}
 			else if($age == null){  
-				echo "<h3>年齡為空白，請重新輸入</h3>";
+				echo "<h3>年齡為空白，請重新輸入</h3>";//未打上修改後的年齡
 				echo '<meta http-equiv=REFRESH CONTENT=2;url=login.php>';
 			}
 			else{
