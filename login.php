@@ -31,9 +31,9 @@
 		<form name="form" method="post" action="connect.php">
 			<p>
 			<table border=1 cellspacing="2">
-			<td align=left>帳號：<input type="text" name="id" /> <br></td>
+			<td align=left>帳號：<input type="text" name="id" /> <br></td> //修改後的新帳號
 			<tr>
-			<td align=left>密碼：</h1><input type="password" name="pw" /> <br></td>
+			<td align=left>密碼：</h1><input type="password" name="pw" /> <br></td> //修改後的新密碼
 			</table> 
 			</p>
 			<input type="submit" name="button" value="送出" />
