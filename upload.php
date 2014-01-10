@@ -5,12 +5,12 @@
 include("mysql_connect.php");   
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>國立臺北教育大學_學習網</title>
+<title>國立臺北教育大學_Group3_數學學習網_檔案上傳</title>
 </head>
 
-<body>
+<body bgcolor="BLACK" text="WHITE" link="#FF00CC" vlink="#FFCC33" alink="FF9900">
 <div id="HEADER">
-	<h2>電腦科學學習網</h2>
+	<p align="center"><img src="design/titlefig.jpg"></p>
 </div>
 <div id="MAIN_NAV">
 	<ul>
@@ -31,20 +31,20 @@ include("mysql_connect.php");
     </p> 
     <p align="center">
 	<center>
-    <form method="post" action="uploadconect.php" enctype="multipart/form-data">
+    <form method="post" action="upload_connect.php" enctype="multipart/form-data">
       <input type="file" name="myfile[]" size="50"><br>
       <input type="file" name="myfile[]" size="50"><br>
       <input type="file" name="myfile[]" size="50"><br>
       <input type="file" name="myfile[]" size="50"><br><br>
-      <input type="submit" value="上傳">
-      <input type="reset" value="重新設定">
+      <input type="submit" value="上傳"> <!--按上傳之後，剛剛選擇的檔案就會上傳至資料庫-->
+      <input type="reset" value="重新設定"> <!--按重新設定之後，剛剛選擇的檔案會全部清空，顯示未選擇檔案-->
     </form>
     </P>
 </div>
 <div id="FOOTER">	
 	<p>
 		<br/><br/><br/><br/><br/><br/>
-		<h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Gung-Si Chen</i> </center></h2>
+		<h2><center><br/>Author by <i>GROUP THREE</i> </center></h2>
 	</p>
 </div>
 </body>
